@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: jealous-kiwi-nodejs 
+  janus-idp.io/tekton: jealous-kiwi-nodejs
+  backstage.io/kubernetes-id: jealous-kiwi-nodejs
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: jealous-kiwi-nodejs
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
